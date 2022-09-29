@@ -7,7 +7,12 @@ app.set('view engine', 'handlebars')
 // routes setting
 app.use(express.static('public'))
 app.get('/', (req, res) => {
-  res.render('index')
+  const movieOne = {
+    id: 1,
+    title: 'Jurassic World 3: Fallen Kingdom',
+    image: 'https://movie-list.alphacamp.io/posters/c9XxwwhPHdaImA2f1WEfEsbhaFB.jpg'
+  }
+  res.render('index', { movie: movieOne})
 })
 
 // start and listen on the Express server

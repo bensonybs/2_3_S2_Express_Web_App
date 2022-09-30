@@ -13,13 +13,20 @@
       </form>
     </div>
   </div>
+  {{#each numberList}}
+  <span>---</span>
+  <div class="d-inline-flex align-items-center justify-content-center bg-info text-white rounded-circle my-4"
+    style="width: 30px; height: 30px;">
+    {{this}}
+  </div>
+  <span>---</span>
+  {{/each}}
   <!-- movie list -->
   <div class="row" id="data-panel">
     <div class="col-sm-3">
       <a href="/{{movie.id}}" class="text-secondary">
         <div class="card mb-2">
-          <img class="card-img-top" src="{{movie.image}}"
-            alt="Card image cap">
+          <img class="card-img-top" src="{{movie.image}}" alt="Card image cap">
           <div class="card-body movie-item-body">
             <h6 class="card-title">{{movie.title}}</h6>
           </div>
